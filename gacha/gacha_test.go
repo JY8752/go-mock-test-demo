@@ -95,6 +95,7 @@ func TestDraw(t *testing.T) {
 
 	assert.Len(t, tx.BeginCalls(), 1)
 	assert.Len(t, tx.CommitCalls(), 1)
+	assert.Len(t, tx.RollbackCalls(), 0)
 }
 
 func assertResult(t *testing.T, itemName, rare, act string) {
